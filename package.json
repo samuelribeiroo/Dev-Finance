@@ -1,0 +1,22 @@
+{
+  "name": "dev-finance",
+  "version": "1.0.0",
+  "description": "put your finances under control",
+  "main": "index.js",
+  "scripts": {
+    "test": "."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelribeiroo/dev-finance.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Samuel C. Ribeiro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samuelribeiroo/dev-finance/issues"
+  },
+  "homepage": "https://github.com/samuelribeiroo/dev-finance#readme"
+}

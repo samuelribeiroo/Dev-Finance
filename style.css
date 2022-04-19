@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-header: #ff7a00;
+    --bg-body: #f1f3f5;
+    --title-color: #212529;
+    --date-color: #e9ecef;
+}
+
+html {
+    text-rendering: optimizeLegibility;
+    image-rendering: optimizeSpeed;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 62, 5%;
+    overflow-x: hidden;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
