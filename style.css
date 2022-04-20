@@ -5,10 +5,12 @@
 }
 
 :root {
-    --bg-header: #ff7a00;
+    --bg-header: #0057ff;
+    --white-100: #ffff;
     --bg-body: #f1f3f5;
     --title-color: #212529;
     --date-color: #e9ecef;
+    --bg-card-total: #003087;
 }
 
 html {
@@ -22,8 +24,9 @@ html {
 
 body {
     font-family: "Roboto", sans-serif;
-    font-size: 62, 5%;
+    font-size: 93.75%; 
     overflow-x: hidden;
+    background-color: var(--bg-body);
 }
 
 ul,
@@ -39,3 +42,85 @@ a {
     text-decoration: none;
 }
 
+.sr-only {
+    width: 1px;
+    border-width: 0;
+    white-space: nowrap;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
+
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--title-color);
+    font-weight: normal;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0 10rem;
+    background-color: var(--bg-header);
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+#balance {
+    margin-top: -8rem;
+    position: relative;
+    z-index: 99;
+}
+
+#balance h2 {
+    margin-top: 0;
+    color: var(--white);
+}
+
+.card {
+    background-color: var(--white-100);
+    padding: 1.5rem 2rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    color: var(--title-color);
+    z-index: 99;
+}
+
+.card h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.card p {
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 3rem;
+    margin-top: 1rem;
+    border-radius: 15px;
+}
+
+.card.total {
+    color: var(--white-100);
+    background-color: var(--bg-card-total);
+}
+
+@media screen and (min-width: 800px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    #balance {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
