@@ -14,40 +14,86 @@
 </head>
 
 <body>
-<header>
-    <div>
-        <img src="./assets/logo.svg" alt="Dev Finance Brand" />
+    <header>
+        <div>
+            <img src="./assets/logo.svg" alt="Dev Finance Brand" />
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="balance">
+            <h2 class="sr-only">Balance</h2>
+            <div class="card">
+                <h3>
+                    <span>Entradas</span>
+                    <img src="./assets/income.svg" alt="Income">
+                </h3>
+                <p id="incomeDisplay">R$ 0, 00</p>
+            </div>
+
+            <div class="card">
+                <h3>
+                    <span>Saídas</span>
+                    <img src="./assets/expense.svg" alt="Expense">
+                </h3>
+                <p id="expenseDisplay">R$ 0, 00</p>
+            </div>
+
+            <div class="card total">
+                <h3>
+                    <span>Total</span>
+                    <img src="./assets/total.svg" alt="Total">
+                </h3>
+                <p id="expenseDisplay">R$ 0, 00</p>
+            </div>
+        </section>
+
+        <section class="transaction">
+            <h2 class="sr-only">Transactions</h2>
+            <a href="#" class="button-new">+ New Transaction</a>
+
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <h2>Nova Transação</h2>
+            <div id="form">
+                <form action="" onsubmit="">
+                    <div class="input-group">
+                        <label for="description" class="sr-only">Descrição</label>
+                        <input type="text" id="description" placeholder="Descrição" name="description" />
+                    </div>
+                    <div class="input-group">
+                        <label for="amount" class="sr-only">Valor</label>
+                        <input type="number" id="amount" step="0.01" placeholder="0,00" name="amount" />
+                        <small class="help">Use o sinal (negativo) para despesas e, (vírgula) para casas
+                            decimais.</small>
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="date">Data</label>
+                        <input type="date" id="date" name="date" />
+                    </div>
+                    <div class="input-group actions">
+                        <a href="#" class="button-cancel">Cancelar</a>
+                        <button type="submit">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-</header>
-
-<main class="container">
-    <section id="balance">
-        <h2 class="sr-only">Balance</h2>
-        <div class="card">
-            <h3>
-                <span>Entradas</span>
-                <img src="./assets/income.svg" alt="Income">
-            </h3>
-            <p id="incomeDisplay">R$ 0, 00</p>
-        </div>
-
-        <div class="card">
-            <h3>
-                <span>Saídas</span>
-                <img src="./assets/expense.svg" alt="Expense">
-            </h3>
-            <p id="expenseDisplay">R$ 0, 00</p>
-        </div>
-
-        <div class="card total">
-            <h3>
-                <span>Total</span>
-                <img src="./assets/total.svg" alt="Total">
-            </h3>
-            <p id="expenseDisplay">R$ 0, 00</p>
-        </div>
-    </section>
-</main>
+    </div>
 
 </body>
 
