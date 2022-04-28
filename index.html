@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -44,7 +44,7 @@
                     <span>Total</span>
                     <img src="./assets/total.svg" alt="Total">
                 </h3>
-                <p id="expenseDisplay">R$ 0, 00</p>
+                <p id="totalDisplay">R$ 0, 00</p>
             </div>
         </section>
 
@@ -68,9 +68,9 @@
 
     <div class="modal-overlay">
         <div class="modal">
-            <h2>Nova Transação</h2>
             <div id="form">
-                <form action="" onsubmit="">
+                <h2>Nova Transação</h2>
+                <form action="" onsubmit="Form.submit(event)">
                     <div class="input-group">
                         <label for="description" class="sr-only">Descrição</label>
                         <input type="text" id="description" placeholder="Descrição" name="description" />
@@ -86,7 +86,7 @@
                         <input type="date" id="date" name="date" />
                     </div>
                     <div class="input-group actions">
-                        <a href="#" class="button-cancel" onclick = "Modal.close()">Cancelar</a>
+                        <a href="#" class="button-cancel" onclick="Modal.close()">Cancelar</a>
                         <button type="submit">Salvar</button>
                     </div>
                 </form>
@@ -94,7 +94,10 @@
         </div>
     </div>
     </div>
-      <script src="./app.js"></script>
+    <footer>
+        <p>©2022 dev.finance 💲</p>
+    </footer>
+    <script src="./app.js"></script>
 </body>
 
 </html>
